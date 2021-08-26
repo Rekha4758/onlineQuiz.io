@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: rgb(223, 222, 221);
+  background: linear-gradient(120deg,#2980b9, #8e44ad);
+  height: 100vh;
+  overflow: hidden;
+  
+}
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 27%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.center h1{
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
+}
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field{
+  position: relative;
+  border-bottom: 3px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+  width: 100%;
+}
+
+.pass{
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+.pass:hover{
+  text-decoration: underline;
+}
+input[type="submit"]{
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover{
+  border-color: #2691d9;
+  transition: .5s;
+}
+.signup_link{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+.signup_link a{
+  color: #2691d9;
+  text-decoration: none;
+}
+.signup_link a:hover{
+  text-decoration: underline;
+} 
+
+.main-div{
+    width: 100%;
+    height: 100vh;
+    /* border: 3px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+
+}
+
+
+.start_btn button{
+    margin: 0.5rem 3rem 0 9rem;
+     padding: 7px 15px;  
+    width: 10rem;
+    border-radius: 15px;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid #007bff;
+    cursor: pointer;
+    word-spacing: 6px;
+    letter-spacing: 2px;
+    background: rgb(53, 29, 109);
+    font-size: 20px;
+    
+    color: #fff;
+
+}
+
+
+.inner-div{
+    width: 65vw;
+    /* border: 3px solid green; */
+    padding: 3rem 4rem;
+    background-color: #fff;
+    box-shadow:  0 0 20px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    color: black;
+    display: none;
+    opacity: 1;
+    
+    
+}
+.inner-div h3{
+    /* font-size: 10px; */
+    /* padding: 0 2rem ; */
+    margin: 1.5rem  0 1rem 0;
+    font-weight: 500;
+    
+
+}
+.inner-div li{
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    list-style: none;
+}
+input{
+    cursor: pointer;
+}
+#submit,
+.btn{
+   padding: 6px 30px ;
+   outline: none;
+   border-radius: 10px;
+   font-size: 1rem;
+   display: block;
+   margin: auto;
+   border: none;
+   background-color: #0fbcf9;
+   margin-top: 2rem;
+   cursor: pointer;
+}
+#submit:hover{
+    background-color: #8698a7;
+}
+ #showScore{ 
+    /* display: none; */
+    /* position: absolute; */
+    font-size: 40px;
+    font-weight: 800;
+    text-shadow: 2px 2px #fff;
+    padding: 3rem 4rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4) ;
+    overflow: hidden;
+
+    
+}
+#showScore .btn{
+    color: #000;
+    background: chartreuse;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+.inner-div header{
+    height: 80px;
+    padding: 0 30px;
+    /* background: royalblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 3px solid #adadad;
+}
+
+.inner-div header .title{
+    font-size: 25px;
+    font-weight: 500;
+}
+.inner-div header .timer {
+     
+    
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 145px;
+     height: 45px;
+     background: chartreuse;
+     border: 1px solid black;
+     border-radius: 5px;
+     padding: 0 8px;
+}
+.inner-div header .timer .time_text{
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+    color: black;
+}
+.inner-div header .timer .timer_sec{
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+@media only screen and (max-width :600px) {
+    .inner-div, .center, .scoreArea { width: 100%;
+      height: 100vh;}
+      .inner-div header{
+        height: 120px;
+      }
+      .inner-div header .timer{
+        display: none;
+      }
+      #showScore{
+        width: 100%;
+        height: 100vh;
+      }
+}

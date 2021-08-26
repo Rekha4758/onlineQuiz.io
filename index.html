@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Quize</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+<body>
+  <div class="main-div">
+    <div class="center" id="login-page">
+      <h1>Login</h1>
+      <form>
+        <div class="txt_field">
+          <input type="text" required>
+
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required>
+
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login" id="btn1" onclick="toggleVisibility()">
+        <div class="signup_link">
+          Not a member? <a href="#">Signup</a>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="inner-div" id="ques">
+      <header>
+        <div class="title">Awesome Quiz Application</div>
+        <div class="timer">
+          <div class="time_text">Time Left</div>
+          <div class="timer_sec" id="sec">1:00</div>
+        </div>
+      </header>
+
+      <h3 class="question">write Question </h3>
+
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="ans1" class="answer">
+          <label for="ans1" id="option1">answer Option</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="ans2" class="answer">
+          <label for="ans2" id="option2">answer Option</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="ans3" class="answer">
+          <label for="ans3" id="option3">answer Option</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="ans4" class="answer">
+          <label for="ans4" id="option4">answer Option</label>
+        </li>
+      </ul>
+
+      <button id="submit">Submit</button>
+
+
+    </div>
+    <div id="showScore" class="scoreArea">
+
+    </div>
+  </div>
+  <script src="./script/main.js"></script>
+</body>
+
+</html>
